@@ -93,10 +93,11 @@ class SignatureFlow extends AbstractCoreFlow<SignatureRequest, SignatureResponse
 										api, map).perform();
 							}
 							
-							if(api.getAppConfig().isEnablePopUps()) {
-								getOperationFactory().getOperation(UIOperation.class, "/fxml/message.fxml",
-									new Object[]{"signature.flow.finished"}).perform();
-							}
+							// IOpenway: disabling the signature confirmation popup cause inconvenient in case of multiple documents signature  
+//							if(api.getAppConfig().isEnablePopUps()) {
+//								getOperationFactory().getOperation(UIOperation.class, "/fxml/message.fxml",
+//									new Object[]{"signature.flow.finished"}).perform();
+//							}
 							
 							return new Execution<SignatureResponse>(new SignatureResponse(value, key.getCertificate(), key.getCertificateChain()));
 						} else {
