@@ -330,7 +330,7 @@ public class AppConfig {
 	public void loadFromProperties(final Properties props) {
 		setApplicationName(props.getProperty(APPLICATION_NAME, "NexU"));
 		
-		final String bindingPortsStr = props.getProperty(BINDING_PORTS, "9796");
+        final String bindingPortsStr = props.getProperty(BINDING_PORTS, "9795");
 		if(StringUtils.isNotEmpty(bindingPortsStr)) {
 			setBindingPorts(toListOfInt(bindingPortsStr));
 		}
