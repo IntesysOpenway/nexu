@@ -1,3 +1,5 @@
+@echo off
+
 rem © Nowina Solutions, 2015-2015
 rem
 rem Concédée sous licence EUPL, version 1.1 ou – dès leur approbation par la Commission européenne - versions ultérieures de l’EUPL (la «Licence»).
@@ -10,9 +12,7 @@ rem Sauf obligation légale ou contractuelle écrite, le logiciel distribué 
 rem SANS GARANTIES OU CONDITIONS QUELLES QU’ELLES SOIENT, expresses ou implicites.
 rem Consultez la Licence pour les autorisations et les restrictions linguistiques spécifiques relevant de la Licence.
 
-@echo off
-
 set JRE_HOME=.\java
 set CATALINA_HOME=.\tomcat
 
-start javaw -jar nexu.jar
+start .\java\bin\javaw -jar nexu.jar
